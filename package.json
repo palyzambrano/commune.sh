@@ -17,5 +17,8 @@
     "vite": "^4.4.8"
   },
   "type": "module",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/inter": "^5.0.8"
+  }
 }

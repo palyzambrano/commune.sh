@@ -1,1 +1,2 @@
-export const prerender = true
+import "@fontsource/inter";
+export const prerender = true;

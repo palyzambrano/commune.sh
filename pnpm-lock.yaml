@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  '@fontsource/inter':
+    specifier: ^5.0.8
+    version: 5.0.8
+
 devDependencies:
   '@sveltejs/adapter-static':
     specifier: ^2.0.2
@@ -1587,6 +1592,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/inter@5.0.8:
+    resolution: {integrity: sha512-28knWH1BfOiRalfLs90U4sge5mpQ8ZH6FS0PTT+IZMKrZ7wNHDHRuKa1kQJg+uHcc6axBppnxll+HXM4c7zo/Q==}
+    dev: false
 
   /@iconify/json@2.2.105:
     resolution: {integrity: sha512-QXb4YggigIxyf2AC2BdqaQYxzzyNAf04qFonGjjKTveickp2heJ6Abz4xuQcqfOHF0Xqhny53N2vmB3F22ipJA==}
