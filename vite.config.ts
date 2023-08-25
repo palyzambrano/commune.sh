@@ -13,7 +13,7 @@ const config = defineConfig({
           // Add your sidebar configs here
         },
         github: "https://github.com/commune-os",
-        logo: "/logo.jpg",
+        logo: "logo.png",
       }),
       siteConfig: {
         title: "Commune",
