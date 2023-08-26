@@ -1,6 +1,6 @@
 ---
 title: Welcome to Commune
-heroImage: /logo.png
+heroImage: /hero.png
 tagline: We're currently in alpha, usable by early adopters. Sign up for your own space on app.commune.sh to try it!.
 actions:
   - label: Commune
