@@ -6,13 +6,26 @@ const config = defineConfig({
   plugins: [
     sveltepress({
       theme: defaultTheme({
-        navbar: [],
+        navbar: [
+          { title: "Docs", to: "/docs/" },
+          { title: "Blog", to: "/blog/" },
+        ],
         sidebar: {
           "/docs/": [
-            { title: "Title 1", to: "/docs/title-1/" },
-            { title: "Title 2", to: "/docs/title-2/" },
-            { title: "Title 3", to: "/docs/title-3/" },
-            { title: "Title 4", to: "/docs/title-4/" },
+            {
+              title: "Introduction",
+              collapsible: true,
+              items: [
+                {
+                  title: "What is sveltepress",
+                  to: "/docs/introduction/",
+                },
+                {
+                  title: "Quick start",
+                  to: "/docs/quick-start/",
+                },
+              ],
+            },
           ],
           "/blog/": [],
         },
