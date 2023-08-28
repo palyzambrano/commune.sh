@@ -6,10 +6,7 @@ const config = defineConfig({
   plugins: [
     sveltepress({
       theme: defaultTheme({
-        navbar: [
-          { title: "Docs", to: "/docs/" },
-          { title: "Blog", to: "/blog/" },
-        ],
+        navbar: [{ title: "Docs", to: "/docs/" }],
         sidebar: {
           "/docs/": [
             {
@@ -27,10 +24,9 @@ const config = defineConfig({
               ],
             },
           ],
-          "/blog/": [],
         },
         github: "https://github.com/commune-os",
-        logo: "logo.svg",
+        logo: "/hero.png",
       }),
       siteConfig: {
         title: "Commune",

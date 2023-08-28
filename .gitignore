@@ -2,3 +2,4 @@ node_modules
 .sveltepress
 .svelte-kit
 .DS_Store
+dist

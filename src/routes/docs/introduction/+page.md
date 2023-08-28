@@ -44,13 +44,13 @@ For example if your file tree look like this
 
 Here's a graph to help you understand
 
-<img src="/layout-hierarchy.png" style="width:100%;" alt="" />
+
 
 ## Configuration
 
 Sveltepress's config is passed to `@sveltepress/vite` vite plugin, all options are fully typed. 
 
-Read [Vite plugins options](/reference/vite-plugin/) for more details.
+
 
 ## Deployment
 
