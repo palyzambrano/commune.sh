@@ -6,11 +6,15 @@ const config = defineConfig({
   plugins: [
     sveltepress({
       theme: defaultTheme({
-        navbar: [
-          // Add your navbar configs here
-        ],
+        navbar: [],
         sidebar: {
-          // Add your sidebar configs here
+          "/docs/": [
+            { title: "Title 1", to: "/docs/title-1/" },
+            { title: "Title 2", to: "/docs/title-2/" },
+            { title: "Title 3", to: "/docs/title-3/" },
+            { title: "Title 4", to: "/docs/title-4/" },
+          ],
+          "/blog/": [],
         },
         github: "https://github.com/commune-os",
         logo: "logo.svg",
