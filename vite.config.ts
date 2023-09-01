@@ -6,7 +6,10 @@ const config = defineConfig({
   plugins: [
     sveltepress({
       theme: defaultTheme({
-        navbar: [{ title: "Docs", to: "/docs/" }],
+        navbar: [
+          { title: "Docs", to: "/docs/introduction/" },
+          { title: "Blog", to: "/posts/all-posts/" },
+        ],
         sidebar: {
           "/docs/": [
             {
@@ -22,6 +25,12 @@ const config = defineConfig({
                   to: "/docs/quick-start/",
                 },
               ],
+            },
+          ],
+          "/posts/": [
+            {
+              title: "All posts",
+              to: "/posts/all-posts/",
             },
           ],
         },
