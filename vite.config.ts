@@ -7,24 +7,22 @@ const config = defineConfig({
     sveltepress({
       theme: defaultTheme({
         navbar: [
-          { title: "Docs", to: "/docs/introduction/" },
+          { title: "Docs", to: "/docs/business-plan/" },
           { title: "Blog", to: "/posts/all-posts/" },
         ],
         sidebar: {
           "/docs/": [
             {
-              title: "Introduction",
-              collapsible: true,
-              items: [
-                {
-                  title: "What is sveltepress",
-                  to: "/docs/introduction/",
-                },
-                {
-                  title: "Quick start",
-                  to: "/docs/quick-start/",
-                },
-              ],
+              title: "Open Business Plan",
+              to: "/docs/business-plan/",
+            },
+            {
+              title: "Terminology",
+              to: "/docs/terminology/",
+            },
+            {
+              title: "Values",
+              to: "/docs/values/",
             },
           ],
           "/posts/": [
