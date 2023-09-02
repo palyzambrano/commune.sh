@@ -8,7 +8,7 @@ const config = defineConfig({
       theme: defaultTheme({
         navbar: [
           { title: "Docs", to: "/docs/business-plan/" },
-          { title: "Blog", to: "/posts/all-posts/" },
+          { title: "Blog", to: "/blog/" },
         ],
         sidebar: {
           "/docs/": [
@@ -23,12 +23,6 @@ const config = defineConfig({
             {
               title: "Values",
               to: "/docs/values/",
-            },
-          ],
-          "/posts/": [
-            {
-              title: "All posts",
-              to: "/posts/all-posts/",
             },
           ],
         },
