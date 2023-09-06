@@ -23,6 +23,19 @@ features:
   - title: Incremental Encryption (soon)
     description: Avoid the complexities of encryption in the nascent stages of community. Opt-in to the advanced security features of Matrix when the time is right.
 
+  - title: Bringing web 1.0 back
+    description: In the glory days of web 1.0, websites would prominently link to other, similar places via lists known as 'forum affiliates', 'blogrolls' or 'webrings'. It was a time of greater connectivity between communal web spaces, each serving as a portal to a tightly knit but infinitely expansive hinterland of digital villages. Our intention is to bring back the good vibes of the old neighborhoods. Not by reressing to a bygone era, but by building the web 1.½ that was skipped over.
+
+  - title: Protocol-centric software
+    description: We're building Commune on top of the Matrix protocol, extending it with community features.
+      Whereas Matrix is private-first, Commune is public-first.
+      Commune is a full-stack app, but as a client it can (soon!) interact with any Matrix server.
+      Commune instances can in turn be viewed by any Matrix client; it's all federated. Some features however can only be accessed via the Commune client.
+
+  - title: Commune is
+    description: A tool for community builders  Download the alpha-release on GitHub. A  place for fellow creators and creatives to congregate join app.commune.sh today. A network Every Commune space is part of the Matrix federation.
+
+
 ---
 
 
