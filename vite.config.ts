@@ -29,11 +29,6 @@ const config = defineConfig({
         github: "https://github.com/commune-os",
         logo: "/hero.png",
       }),
-      siteConfig: {
-        title: "Commune",
-        description:
-          "A cozy community platform built for world-wide web togetherness.",
-      },
     }),
   ],
 });
