@@ -52,7 +52,7 @@
 
   <div class="flex justify-center">
     <a
-      class="max-w-[400px] bg-gray-200 py-3 px-6 text-center dark:bg-gray-700 font-bold rounded-lg"
+      class="max-w-3xl w-full bg-gray-200 py-3 text-center dark:bg-gray-700 font-bold rounded-lg"
       href="https://app.commune.sh"
       target="_blank"
     >
@@ -60,7 +60,7 @@
     </a>
   </div>
 
-  <div class="mt-16">
+  <div class="mt-16 max-w-3xl w-full mx-auto">
     <h2 class="text-center font-bold text-3xl">
       Back to the future of web 1. ½
     </h2>
@@ -91,39 +91,48 @@
   <div class="mt-16">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <Card title="Commune is..">
-        <p>
-          a tool for community builders: Download the alpha-release on GitHub.
-        </p>
-        <p>
-          a place for fellow creators and creatives to congregate: join
-          app.commune.sh today.
-        </p>
-        <p>a network: Every Commune space is part of the Matrix federation.</p>
+        <ul>
+          <li>
+            a tool for community builders: Download the alpha-release on GitHub.
+          </li>
+          <li>
+            a place for fellow creators and creatives to congregate: join
+            app.commune.sh today.
+          </li>
+          <li>
+            a network: Every Commune space is part of the Matrix federation.
+          </li>
+        </ul>
       </Card>
-      <Card title="Commune is..">
-        <p>
-          We're building Commune on top of the Matrix protocol, extending it
-          with community features
-        </p>
-        <p>Whereas Matrix is private-first, Commune is public-first.</p>
-        <p>
-          Commune is a full-stack app, but as a client it can (soon!) interact
-          with any Matrix server.
-        </p>
-        <p>
-          Commune instances can in turn be viewed by any Matrix client; it's all
-          federated. Some features however can only be accessed via the Commune
-          client.
-        </p>
+      <Card title="Protocol-centric software.">
+        <ul>
+          <li>
+            We're building Commune on top of the Matrix protocol, extending it
+            with community features
+          </li>
+          <li>Whereas Matrix is private-first, Commune is public-first</li>
+          <li>
+            Commune is a full-stack app, but as a client it can (soon!) interact
+            with any Matrix server.
+          </li>
+          <li>
+            Commune instances can in turn be viewed by any Matrix client; it's
+            all federated. Some features however can only be accessed via the
+            Commune client.
+          </li>
+        </ul>
       </Card>
     </div>
   </div>
 
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-16 gap-4"
-  >
-    {#each features as feature}
-      <FeatureCard {...feature} />
-    {/each}
+  <div class="my-16">
+    <h2 class="text-center font-bold text-3xl">Key Features</h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-8"
+    >
+      {#each features as feature}
+        <FeatureCard {...feature} />
+      {/each}
+    </div>
   </div>
 </div>
