@@ -4,7 +4,7 @@ import { redirect } from "@sveltejs/kit";
 export async function handleError({ error, event }) {
   if (error instanceof Error) {
     if (error.message.includes("Not found")) {
-      throw redirect(308, `https://app.commune.sh${event.url.pathname}`);
+       redirect(308, `https://app.commune.sh${event.url.pathname}`);
     }
   }
 }
