@@ -4,8 +4,8 @@
   import "@fontsource/inter";
 
   if (browser) {
-    localStorage.setItem("theme", "dark");
-    localStorage.setItem("SVELTEPRESS_DARK_MODE", "on");
+  //  localStorage.setItem("theme", "dark");
+    //localStorage.setItem("SVELTEPRESS_DARK_MODE", "on");
   }
 </script>
 

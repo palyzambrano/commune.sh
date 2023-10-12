@@ -35,104 +35,86 @@
   ];
 </script>
 
-<div class="max-w-[70vw] mx-auto">
-  <div class="flex items-center justify-center gap-4 text-3xl font-bold">
-    <span>make</span>
-    <span>·</span>
-    <span>space</span>
+<section class="dark:bg-gradient-to-b from-[#0A0A0A] from-70% to-[#5A1939] ">
+  <div class="flex  justify-around mx-auto  md:w-64">
+    <h4 class="text-2xl">MAKE</h4>
+    <span>*</span>
+    <h4 class="text-2xl">SPACE</h4>
   </div>
-
-  <div class="flex flex-col md:flex-row flex-col-reverse gap-0 items-center">
-    <h2 class="text-3xl font-bold text-center md:text-start">
-      a cozy community platform built for world-wide web togetherness.
-    </h2>
-
-    <img src="/hero.png" alt="Hero " class="w-full max-h-md" />
-  </div>
-
-  <div class="flex justify-center">
-    <a
-      class="max-w-3xl w-full bg-gray-200 py-3 text-center dark:bg-gray-700 font-bold rounded-lg"
-      href="https://app.commune.sh"
-      target="_blank"
-    >
+  <h2 class="text-4xl md:text-9xl uppercase text-center md:mb-[-50px]">ignite union</h2>
+  <figure class="flex justify-center">
+    <img src="/hero.png" class="md:w-8/12 w-12/12">
+  </figure>
+  <div class="text-center">
+    <p class="md:w-96 m-auto p-8 text-xl">
+      <strong>A tool for community builders,</strong>
+      a network: Every Commune space is 
+      part of the Matrix federation.
+    </p>
+    <a class="bg-[#E74F3B] dark:bg-gradient-to-r from-[#357474] to-[#FF2350] p-4 dark:rounded-full inline-block" href="https://app.commune.sh" target="_blank">
       Try the pre-alpha at app.commune.sh
     </a>
   </div>
+</section>
 
-  <div class="mt-16 max-w-3xl w-full mx-auto">
-    <h2 class="text-center font-bold text-3xl">
+<!--Section 2 / Protocol-centric-->
+<section class="dark:bg-gradient-to-b from-[#5A1939] from-30% to-[#0A0A0A]">
+  <h3 class="text-2xl m-0 pt-10 text-center md:pl-24 md:text-left">Protocol-centric software</h3>
+  <figure class="flex justify-center">
+    <img class="w-11/12" src="http://via.placeholder.com/900x400" alt="">
+  </figure>
+  <div class="flex flex-col md:flex-row md:justify-around">
+    <p class="md:w-1/3 px-4 text-xl">We’re building Commune on top of the federated and secure [Matrix protocol], extending it with public-first community features.</p>
+    <p class="md:w-1/3 px-4 text-xl">Being grounded in a protocol of chat interoperability means a maximalist approach to user autonomy and [credible exit].</p>
+  </div>
+</section>
+
+<!--Section 3 / Back to the future-->
+<section class="bg-[#0A0A0A] m-0">
+    <h3>
       Back to the future of web 1. ½
-    </h2>
-    <div class="mt-8">
+    </h3>
+    <div class="text-xl w-11/12">
       <p>
-        In the glory days of web 1.0, social websites would prominently link out
-        to other places via lists known as 'forum affiliates', 'blogrolls' or
-        'webrings'. Communities we could vouch for.
+        In the glory days of web 1.0, social websites would prominently link out 
+        to their digital neighbors via lists known as webrings! Fellow communities 
+        they could vouch for.
       </p>
 
       <p>
-        It was a time of greater connectivity between communal web spaces, each
-        serving as a portal to a tightly knit but infinitely expansive
-        hinterland of digital villages.
+        It was a time of greater connectivity between communal web spaces, each 
+        serving as an entryway into a tightly knit but infinitely expansive hinterland 
+        of digital villages.
       </p>
 
       <p>
-        We wanna bring back the good vibes of the old web neighborhoods. Not by
-        regressing to a bygone era, but by <a
-          class="text-blue-5 dark:text-blue-3"
-          href="https://blog.erlend.sh/web-of-the-people"
-          >building the web 1.½ that should have been</a
-        >.
+        We are bringing back the good vibes of the old web neighborhoods. Not by 
+        regressing to a bygone era, but by 
+        <a class="" href="https://blog.erlend.sh/web-of-the-people">
+          building the web 1.½ that should have been;
+        </a
+        >
       </p>
     </div>
-  </div>
+</section>
 
-  <div class="mt-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <Card title="Commune is..">
-        <ul>
-          <li>
-            a tool for community builders: Download the alpha-release on GitHub.
-          </li>
-          <li>
-            a place for fellow creators and creatives to congregate: join
-            app.commune.sh today.
-          </li>
-          <li>
-            a network: Every Commune space is part of the Matrix federation.
-          </li>
-        </ul>
-      </Card>
-      <Card title="Protocol-centric software.">
-        <ul>
-          <li>
-            We're building Commune on top of the Matrix protocol, extending it
-            with community features
-          </li>
-          <li>Whereas Matrix is private-first, Commune is public-first</li>
-          <li>
-            Commune is a full-stack app, but as a client it can (soon!) interact
-            with any Matrix server.
-          </li>
-          <li>
-            Commune instances can in turn be viewed by any Matrix client; it's
-            all federated. Some features however can only be accessed via the
-            Commune client.
-          </li>
-        </ul>
-      </Card>
-    </div>
-  </div>
+<!--Section 4 / Key Features-->
+<section>
+      <h3>Key Features</h3>
+      <div>
+        {#each features as feature}
+          <FeatureCard {...feature} />
+        {/each}
+      </div>
+      <div>
+        <figure>
+  
+        </figure>
+      </div>
+</section>
 
-  <div class="my-16">
-    <h2 class="text-center font-bold text-3xl">Key Features</h2>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-8"
-    >
-      {#each features as feature}
-        <FeatureCard {...feature} />
-      {/each}
-    </div>
-  </div>
-</div>
+<!--Section 5 / The Story-->
+<section>
+
+</section>
+
