@@ -47,7 +47,7 @@
       a cozy community platform built for world-wide web togetherness.
     </h2>
 
-    <img src="/hero.png" alt="Hero " class="w-full max-h-md" />
+    <img src="/hero.png" alt="Hero " class="hero" />
   </div>
 
   <div class="flex justify-center">
@@ -136,3 +136,17 @@
     </div>
   </div>
 </div>
+
+<style>
+.hero {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 100%;
+    }
+}
+</style>
