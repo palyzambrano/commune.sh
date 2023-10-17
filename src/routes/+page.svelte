@@ -73,7 +73,7 @@
       <h3 class="text-2xl m-0 pt-10 text-center md:pl-24 md:text-left">
         Protocol-centric software
       </h3>
-      <figure class="flex justify-center">
+      <figure class="m-auto">
         <img class="w-11/12" src="http://via.placeholder.com/900x400" alt="" />
       </figure>
       <div class="flex flex-col md:flex-row md:justify-around">
