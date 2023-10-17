@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+
+
+export default {
   darkMode: 'class',
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
@@ -8,6 +11,8 @@ module.exports = {
         sans: ['Space Mono', 'sans-serif'],
         title: ['Uncut Sans', 'sans-serif']
       }
-    }
+    },
   },
-};
+  plugins: [],
+}
+
