@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	import uiStore, { ColorScheme } from '$lib/stores/ui';
 
-	
+	export let href: string;
 </script>
 
 {#if $uiStore.colorScheme === ColorScheme.Dark}
 	<a
 		class="cursor-pointer text-zinc-50 dark:bg-gradient-to-r from-[#357474] to-[#FF2350] p-4 dark:rounded-full dark:inline-block hidden text-center md:w-4/12 w-8/12"
-		href="https://app.commune.sh"
 		target="_blank"
+		{href}
 	>
 		<slot />
 	</a>

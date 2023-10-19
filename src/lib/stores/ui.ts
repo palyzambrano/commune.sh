@@ -4,103 +4,102 @@ import { writable, type Readable } from 'svelte/store';
 const PREFERS_COLOR_SCHEME_DARK_MEDIA_QUERY = '(prefers-color-scheme:dark)';
 
 export type UIStoreMethods = {
-  setDarkColorScheme(): void;
-  setLightColorScheme(): void;
-  syncPreferredScheme(): void;
+	setDarkColorScheme(): void;
+	setLightColorScheme(): void;
+	syncPreferredScheme(): void;
 };
 
 export enum ColorScheme {
-  Dark = 'dark',
-  Light = 'light',
+	Dark = 'dark',
+	Light = 'light'
 }
 
 export type UIStore = {
-  colorScheme: ColorScheme;
+	colorScheme: ColorScheme;
 };
 
 /**
  * Returns the preferred color scheme based on user's operative system
  */
 export function getPreferredScheme(): ColorScheme {
-  if (browser) {
-    const localColorScheme = localStorage.getItem('colorScheme');
+	if (browser) {
+		const localColorScheme = localStorage.getItem('colorScheme');
 
-    if (localColorScheme) {
-      return localColorScheme as ColorScheme;
-    }
-  }
+		if (localColorScheme) {
+			return localColorScheme as ColorScheme;
+		}
+	}
 
-  if (typeof window !== 'undefined') {
-    return window?.matchMedia?.(PREFERS_COLOR_SCHEME_DARK_MEDIA_QUERY)?.matches
-      ? ColorScheme.Dark
-      : ColorScheme.Light;
-  }
+	if (typeof window !== 'undefined') {
+		return window?.matchMedia?.(PREFERS_COLOR_SCHEME_DARK_MEDIA_QUERY)?.matches
+			? ColorScheme.Dark
+			: ColorScheme.Light;
+	}
 
-  return ColorScheme.Light;
+	return ColorScheme.Light;
 }
 
 export function createUIStore() {
-  const { subscribe, update } = writable({
-    colorScheme: getPreferredScheme(),
-  });
+	const { subscribe, update } = writable({
+		colorScheme: getPreferredScheme()
+	});
 
-  const syncPreferredScheme = () => {
-    const preferredScheme = getPreferredScheme();
+	const syncPreferredScheme = () => {
+		const preferredScheme = getPreferredScheme();
 
-    if (preferredScheme === ColorScheme.Dark) {
-      setDarkColorScheme();
-      return;
-    }
+		if (preferredScheme === ColorScheme.Dark) {
+			setDarkColorScheme();
+			return;
+		}
 
-    setLightColorScheme();
-  };
+		setLightColorScheme();
+	};
 
-  const setDarkColorScheme = () => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.add('dark');
+	const setDarkColorScheme = () => {
+		if (typeof document !== 'undefined') {
+			document.documentElement.classList.add('dark');
 
-      update((current) => ({
-        ...current,
-        colorScheme: ColorScheme.Dark,
-      }));
-    }
-  };
+			update((current) => ({
+				...current,
+				colorScheme: ColorScheme.Dark
+			}));
+		}
+	};
 
-  const setLightColorScheme = () => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.remove('dark');
+	const setLightColorScheme = () => {
+		if (typeof document !== 'undefined') {
+			document.documentElement.classList.remove('dark');
 
-      update((current) => ({
-        ...current,
-        colorScheme: ColorScheme.Light,
-      }));
-    }
-  };
+			update((current) => ({
+				...current,
+				colorScheme: ColorScheme.Light
+			}));
+		}
+	};
 
-  const setPreferred = (scheme: ColorScheme) => {
-    if (browser) {
-      localStorage.setItem('colorScheme', scheme);
+	const setPreferred = (scheme: ColorScheme) => {
+		if (browser) {
+			localStorage.setItem('colorScheme', scheme);
 
-      if (scheme === ColorScheme.Dark) {
-        setDarkColorScheme();
-        return;
-      }
+			if (scheme === ColorScheme.Dark) {
+				setDarkColorScheme();
+				return;
+			}
 
-      setLightColorScheme();
-    }
-  };
+			setLightColorScheme();
+		}
+	};
 
-  setPreferred(ColorScheme.Light);
+	setPreferred(ColorScheme.Light);
 
-  return {
-    subscribe,
-    setDarkColorScheme,
-    setLightColorScheme,
-    setPreferred,
-    syncPreferredScheme,
-  };
+	return {
+		subscribe,
+		setDarkColorScheme,
+		setLightColorScheme,
+		setPreferred,
+		syncPreferredScheme
+	};
 }
 
-const uiStore = createUIStore() as unknown as Readable<UIStore> &
-  UIStoreMethods;
+const uiStore = createUIStore() as unknown as Readable<UIStore> & UIStoreMethods;
 export default uiStore;
