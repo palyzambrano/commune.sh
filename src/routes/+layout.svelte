@@ -1,14 +1,9 @@
-<!-- Leave this. Or you can add more content for your custom layout -->
 <script>
-  import "../app.css"
-  //import "@fontsource/inter";
-
-  import { browser } from "$app/environment";
-
-  if (browser) {
-    localStorage.setItem("theme", "dark");
-    localStorage.setItem("SVELTEPRESS_DARK_MODE", "on");
-  }
+	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import '../app.css';
 </script>
 
+<Header />
 <slot />
+<Footer />
