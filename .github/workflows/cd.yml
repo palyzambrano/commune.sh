@@ -1,0 +1,43 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: CD
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
+        with:
+          ref: 'main'
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install Dependencies
+        run: bun i
+
+      - name: Build for Production
+        env:
+          NODE_ENV: production
+        run: bun run build
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@1.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'communeos'
+          directory: ./.svelte-kit/cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
